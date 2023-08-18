@@ -1,0 +1,24 @@
+body{
+    background-image: url(SkyeBackground.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 250px;
+}
+
+div{
+    font-size: x-large;
+    color: #e00505ea;
+}
+
+button {
+    background-color: #0b8b0f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+  }
