@@ -1,18 +1,20 @@
 let listaNome = [];
-let listaProfissao = [];
+let listaProf = [];
 
 function ver() {
     console.log(listaNome);
-    console.log(listaProfissao);
+    console.log(listaProf);
 }
 
 function adc(){
     let nome = document.getElementById("nome").value;
-    let profissao = document.getElementById("profissao").value;
-    listaNome.push(nome);
-    listaProfissao.push(profissao);
+    let prof = document.getElementById("prof").value;
+    var nomeMaiusc = nome.toUpperCase();
+    var profMaiusc = prof.toUpperCase();
+    listaNome.push(nomeMaiusc);
+    listaProf.push(profMaiusc);
     console.log(listaNome);
-    console.log(listaProfissao);
+    console.log(listaProf);
     Swal.fire({
         icon: 'success',
         title: 'Sucesso',
@@ -22,7 +24,8 @@ function adc(){
 
 function rmv(){
     let nome = document.getElementById("nome").value;
-    let pos = listaNome.indexOf(nome);
+    var nomeMaiusc = nome.toUpperCase();
+    let pos = listaNome.indexOf(nomeMaiusc);
     if(pos == -1){
         Swal.fire({
             icon: 'error',
@@ -32,11 +35,15 @@ function rmv(){
     }
     else{
         listaNome.splice(pos, 1);
-        listaProfissao.splice(pos, 1);
+        listaProf.splice(pos, 1);
         Swal.fire({
             icon: 'success',
             title: 'Sucesso',
             text: 'A pessoa '+nome+ ' foi removida!',
+            
           })
+          console.log(listaNome);
+          console.log(listaProf);
     }
+    
 }
