@@ -11,6 +11,13 @@ function adc(){
     let prof = document.getElementById("prof").value;
     var nomeMaiusc = nome.toUpperCase();
     var profMaiusc = prof.toUpperCase();
+    if(listaNome.includes(nomeMaiusc) == true){
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro',
+            text: 'A pessoa '+nome+' não foi encontrada na lista!'
+          })
+    }else{
     listaNome.push(nomeMaiusc);
     listaProf.push(profMaiusc);
     console.log(listaNome);
@@ -19,7 +26,7 @@ function adc(){
         icon: 'success',
         title: 'Sucesso',
         text: 'A pessoa '+nome+ ' foi adicionada!',
-      })
+      })}
 }
 
 function rmv(){
